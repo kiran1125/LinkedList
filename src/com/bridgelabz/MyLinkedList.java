@@ -69,6 +69,14 @@ public class MyLinkedList {
     }
 
     /**
+     * To delete the first node that is head node and changing the head to the next node
+     */
+    public void deleteFirstNode(){
+        MyNode temp = head;
+        head = temp.next;
+    }
+
+    /**
      * MyNode is to create the node with data
      */
     class MyNode{
