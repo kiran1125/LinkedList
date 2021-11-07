@@ -54,6 +54,21 @@ public class MyLinkedList {
     }
 
     /**
+     * inserting the node at specified index
+     * @param index
+     * @param data
+     */
+    public void insertAt(int index,int data){
+        MyNode newNode = new MyNode(data);
+        MyNode temp = head;
+        for (int i=0;i < index - 1;i++){             //traversing to that Index
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
+    /**
      * MyNode is to create the node with data
      */
     class MyNode{
