@@ -122,6 +122,27 @@ public class MyLinkedList {
             temp = temp.next;
         }
     }
+    public void delete(int data){
+        MyNode temp = head;
+        if (temp.data == data)
+            pop();
+        while(temp != null){
+            if ((temp.next).data == data){
+                temp.next = (temp.next).next;
+                break;
+            }
+            temp = temp.next;
+        }
+    }
+    public int size(){
+        int size = 0;
+        MyNode temp = head;
+        while(temp != null ){
+            size++;
+            temp = temp.next;
+        }
+        return size;
+    }
 
     /**
      * MyNode is to create the node with data
