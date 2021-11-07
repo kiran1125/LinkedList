@@ -23,6 +23,11 @@ public class MyLinkedList {
             tail = newNode;
         }
     }
+    public void insertAtStart(int data){
+        MyNode newNode = new MyNode(data);
+        newNode.next = head;
+        head = newNode;
+    }
 
     /**
      * MyNode is to create the node with data
