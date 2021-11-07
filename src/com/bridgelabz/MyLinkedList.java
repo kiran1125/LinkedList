@@ -23,10 +23,34 @@ public class MyLinkedList {
             tail = newNode;
         }
     }
+
+    /**
+     * insertAtStart is to add data at Head position
+     * @param data
+     */
     public void insertAtStart(int data){
         MyNode newNode = new MyNode(data);
         newNode.next = head;
         head = newNode;
+    }
+    /**
+     * Append method is to add data to the last
+     * @param data
+     */
+    public void append(int data){
+        MyNode newNode = new MyNode(data);
+        if (head == null){
+            head = newNode;
+            head.next = null;
+        }
+        else {
+            MyNode temp = head;
+            while (temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            temp = newNode;
+        }
     }
 
     /**
