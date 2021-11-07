@@ -71,9 +71,20 @@ public class MyLinkedList {
     /**
      * To delete the first node that is head node and changing the head to the next node
      */
-    public void deleteFirstNode(){
+    public void pop(){
         MyNode temp = head;
         head = temp.next;
+    }
+
+    /**
+     * Removes the last node in the list
+     */
+    public void popLast(){
+        MyNode temp = head;
+        while ((temp.next).next != null){               //it will traverse upto last before node
+            temp = temp.next;
+        }
+        temp.next = null;
     }
 
     /**
