@@ -3,13 +3,11 @@
 package com.bridgelabz;
 public class LinkedListMain {
     public static void main(String[] args) {
-        MyLinkedList list = new MyLinkedList();
-        list.add(56);
-        list.add(30);
-        list.add(70);
-        list.insertAfter(30,40);
-        list.delete(40);
-        System.out.println("size of the list : " + list.size());
-        list.print();
+       SortedLinkedList sortedLinkedList= new SortedLinkedList();
+       sortedLinkedList.add(56);
+       sortedLinkedList.add(30);
+       sortedLinkedList.add(40);
+       sortedLinkedList.add(70);
+       sortedLinkedList.print();
     }
 }
