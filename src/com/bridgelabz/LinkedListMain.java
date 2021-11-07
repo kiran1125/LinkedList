@@ -7,8 +7,8 @@ public class LinkedListMain {
         list.add(56);
         list.add(30);
         list.add(70);
-        list.popLast();
 
         list.print();
+        System.out.println("\n Index number : " + list.search(56));
     }
 }

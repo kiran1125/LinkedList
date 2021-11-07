@@ -88,6 +88,24 @@ public class MyLinkedList {
     }
 
     /**
+     * Its function is to get the index number of the given data which is present in the list
+     * @param data
+     * @return index
+     */
+    public int search(int data){
+        MyNode temp = head;
+        int index = 0;                      //initialising the index
+        while(temp != null){                   //traverse through the list
+            if (temp.data == data) {
+                return index;
+            }
+            index++;
+            temp = temp.next;
+        }
+        return index;
+    }
+
+    /**
      * MyNode is to create the node with data
      */
     class MyNode{
