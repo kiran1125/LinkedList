@@ -106,6 +106,24 @@ public class MyLinkedList {
     }
 
     /**
+     * inserting the data after the search data using the searchData and data
+     * @param searchData
+     * @param data
+     */
+    public void insertAfter(int searchData,int data){
+        //creating new node
+        MyNode newNode = new MyNode(data);
+        MyNode temp = head;
+        while (temp != null){                            //traversing through list
+            if (temp.data == searchData){
+                newNode.next = temp.next;
+                temp.next = newNode;
+            }
+            temp = temp.next;
+        }
+    }
+
+    /**
      * MyNode is to create the node with data
      */
     class MyNode{
